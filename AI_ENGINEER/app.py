@@ -1,11 +1,14 @@
 from flask import Flask, render_template
-import pymongo
-from pymongo import MongoClient
+# import pymongo
+# from pymongo import MongoClient
 
-cluster = MongoClient("mongodb+srv://aieng:<Pagalalone42!>@cluster0.s23zp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+# cluster = MongoClient("mongodb+srv://aieng:<Pagalalone42!>@cluster0.s23zp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
-db = cluster("aieng")
-collection = ("aieng")
+# db = cluster("aieng")
+# collection = ("aieng")
+
+# create routes
+from user import routes
 
 
 # Create instance of Flask model is app
