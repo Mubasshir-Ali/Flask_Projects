@@ -1,6 +1,6 @@
 from flask import Flask, render_template
-# import pymongo
-# from pymongo import MongoClient
+import pymongo
+from pymongo import MongoClient
 
 # cluster = MongoClient("mongodb+srv://aieng:<Pagalalone42!>@cluster0.s23zp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
