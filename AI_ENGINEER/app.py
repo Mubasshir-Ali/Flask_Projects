@@ -1,4 +1,12 @@
 from flask import Flask, render_template
+import pymongo
+from pymongo import MongoClient
+
+cluster = MongoClient("mongodb+srv://aieng:<Pagalalone42!>@cluster0.s23zp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+
+db = cluster("aieng")
+collection = ("aieng")
+
 
 # Create instance of Flask model is app
 app = Flask(__name__)
@@ -53,6 +61,10 @@ def register():
 @app.route("/forgot-password")
 def forgot_password():
     return render_template("forgot-password.html")
+
+@app.route("/page-not-found")
+def page_not_found():
+    return render_template("404.html")
 
 
 # Debugger Mode is ON when we check any errors in runtime And when the site is complete then the Debugger Mode is OFF
