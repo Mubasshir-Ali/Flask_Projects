@@ -24,7 +24,7 @@
 </head>
 
 <body class="bg-gradient-primary">
-
+{% block content %}
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
@@ -40,26 +40,26 @@
                             <form class="user" name="signup_form">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="FirstName"
-                                            placeholder="First Name">
+                                        <input type="text" name="fname" class="form-control form-control-user" id="FirstName"
+                                            placeholder="First Name" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Last Name">
+                                        <input type="text" name="lname" class="form-control form-control-user" id="LastName"
+                                            placeholder="Last Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
+                                    <input type="email" name="email" class="form-control form-control-user" id="Email"
+                                        placeholder="Email Address" required>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
+                                        <input type="password" name="password" class="form-control form-control-user"
+                                            id="Password" placeholder="Password" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                        <input type="password" name="rpassword" class="form-control form-control-user"
+                                            id="rPassword" placeholder="Repeat Password" required>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block" id="submitbtn">
@@ -87,7 +87,7 @@
         </div>
 
     </div>
-
+{% endblock %}
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{url_for('static', filename = 'vendor/jquery/jquery.min.js')}}"></script>

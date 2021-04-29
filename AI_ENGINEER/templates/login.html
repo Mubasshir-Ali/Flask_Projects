@@ -25,7 +25,7 @@
 </head>
 
 <body class="bg-gradient-primary">
-
+{% block content %}
     <div class="container">
 
         <!-- Outer Row -->
@@ -43,15 +43,16 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" name="login_form">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                            <input type="email" name="email" class="form-control form-control-user"
+                                                id="Email" aria-describedby="emailHelp"
+                                                placeholder="Enter Email Address..." 
+                                                required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" name="password" class="form-control form-control-user"
+                                                id="Password" placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -89,6 +90,7 @@
         </div>
 
     </div>
+    {% endblock %}
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{url_for('static', filename = 'vendor/jquery/jquery.min.js')}}"></script>

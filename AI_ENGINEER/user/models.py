@@ -33,7 +33,8 @@ class User:
         # Create the user object
         user = {
             "_id": uuid.uuid4().hex,
-            "name": request.form.get('name'),
+            "fname": request.form.get('fname'),
+            "lname": request.form.get('lname'),
             "email": request.form.get('email'),
             "password": request.form.get('password')
         }

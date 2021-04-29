@@ -3,13 +3,14 @@ import pymongo
 from pymongo import MongoClient
 from functools import wraps
 
+
 # create routes
 from user import routes
 
-# cluster = MongoClient("mongodb+srv://aieng:<Pagalalone42!>@cluster0.s23zp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+# cluster = MongoClient("mongodb+srv://aieng:12345678m@cluster0.s23zp.mongodb.net/aieng?retryWrites=true&w=majority")
 
-# db = cluster("aieng")
-# collection = ("aieng")
+# db = cluster["aieng"]
+# collection = ["aieng"]
 
 
 
